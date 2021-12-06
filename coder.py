@@ -1,6 +1,6 @@
 """
 ---------------------------------------------------
-# Steganograpy - Tool for Image Steganography
+# Steganograpy - Image Steganography Coder
 ---------------------------------------------------
 """
 __author__ = "Louis Hinz"
@@ -73,22 +73,22 @@ def encode_enc(newimg, data):
 
 # Encode data into image
 def encode():
-	img = input("Enter image name(with extension) : ")
+	img = input("[copy] file-name with extension: ")
 	image = Image.open(img, 'r')
 
-	data = input("Enter data to be encoded : ")
+	data = input("[encode] phrase: ")
 	if (len(data) == 0):
 		raise ValueError('Data is empty')
 
 	newimg = image.copy()
 	encode_enc(newimg, data)
 
-	new_img_name = input("Enter the name of new image(with extension) : ")
+	new_img_name = "encoded-"+img
 	newimg.save(new_img_name, str(new_img_name.split(".")[1].upper()))
 
 # Decode the data in the image
 def decode():
-	img = input("Enter image name(with extension) : ")
+	img = input("[decode] file-name with extension: ")
 	image = Image.open(img, 'r')
 	data = ''
 	imgdata = iter(image.getdata())
@@ -111,19 +111,12 @@ def decode():
 		if (pixels[-1] % 2 != 0):
 			return data
 
-# Main Function
-def main():
-	a = int(input("1. Encode\n2. Decode\n"))
-	if (a == 1):
-		encode()
+print("\n––•––√\/––•––steganograpy––•–√\/––•––\n")
+a = int(input("\t     •-encode-(1)\n\t     •-decode-(2)\n~ "))
+if (a == 1):
+	encode()
 
-	elif (a == 2):
-		print("Decoded Word : " + decode())
-	else:
-		raise Exception("Enter correct input")
-
-# Driver Code
-if __name__ == '__main__' :
-
-	# Calling main function
-	main()
+elif (a == 2):
+	print("[decode] phrase: " + decode())
+else:
+	raise Exception("Enter correct input")
