@@ -5,7 +5,6 @@
 <p>steganography is the method of hiding secret data in files.<br>
 the idea behind image-based steganography is simple<br>
 images are composed of digital data (pixels), which describes what’s inside the picture<br>
-usually the colors of all the pixels<br>
 every image is made up of pixels and every pixel contains 3-values (red, green, blue)
 </p>
 
@@ -19,7 +18,7 @@ the value is made odd if 1 occurs and even if 0 occurs
 <h3>decoding data</h3>
 <p>three pixels are read at a time, till the last value is odd, which means the message is over<br>
 every 3-pixels contain a binary data, which can be extracted by the same encoding logic<br>
-If the value if odd the binary bit is 1 else 0
+If the value is odd the binary bit is 1 else 0
 </p>
 
 <h2> dependencies </h2>
@@ -42,4 +41,4 @@ If the value if odd the binary bit is 1 else 0
 
          python steganogra.py
 
-<img src="encoded-img.png" width="50%">
+<center><img src="encoded-img.png" width="50%"></center>
