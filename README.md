@@ -41,4 +41,4 @@ If the value is odd the binary bit is 1 else 0
 
          python coder.py
 
-         <img src="encoded-img.png" width="50%">
+       <img src="encoded-img.png" width="50%">
