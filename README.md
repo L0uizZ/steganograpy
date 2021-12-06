@@ -39,6 +39,6 @@ If the value is odd the binary bit is 1 else 0
 
  1) run steganograpy
 
-         python steganogra.py
+         python coder.py
 
-<center><img src="encoded-img.png" width="50%"></center>
+         <img src="encoded-img.png" width="50%">
