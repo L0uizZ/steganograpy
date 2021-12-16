@@ -3,7 +3,7 @@
 # Steganograpy - Image Steganography Coder
 ---------------------------------------------------
 """
-__author__ = "Louis Hinz"
+__author__ = "L0uizZ"
 __version__ = "0.0.1"
 
 # PIL module is used to extract pixels and modify
